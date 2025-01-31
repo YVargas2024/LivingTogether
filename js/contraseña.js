@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Manejo de rol
     const rolSelect = document.getElementById("rol");
-    const adminOption = rolSelect.querySelector('option[value="2"]');
+    const adminOption = rolSelect.querySelector('option[value="1"]');
     if (adminOption) {
         adminOption.remove(); // Eliminar la opción de Administrador
     }

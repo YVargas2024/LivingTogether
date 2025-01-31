@@ -1,0 +1,170 @@
+<?php
+session_start();
+
+// Check if 'usuario' key exists in the session before accessing it
+if (isset($_SESSION['usuario'])) {
+    header('Location: ../vistas/welcome.php');
+    exit(); // Ensure script stops executing after redirection
+}
+
+include_once '../modelo/Conexion.php';
+include_once '../modelo/UserModel.php';
+include_once '../Controladores/UserController.php';
+?>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/3.png" type="image/x-icon">
+        <title>Login y Register - MagtimusPro</title>
+        <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/estilosInicioyRegistro.css">
+        <link rel="stylesheet" href="../css/contraseña.css">
+
+        <style>
+            /* Estilo para los campos obligatorios con borde rojo */
+            
+            input:invalid {
+                border: 2px solid red;
+            }
+            /* Estilo para los mensajes de advertencia */
+            
+            input:invalid+.error-message {
+                display: block;
+                color: red;
+                font-size: 0.9em;
+                margin-top: 5px;
+            }
+            /* Mensaje por defecto de error invisible */
+            
+            .error-message {
+                display: none;
+            }
+            /* Estilo del logo y texto "Living Together" */
+            
+            .logo {
+                display: flex;
+                align-items: center;
+                /* Centra el contenido verticalmente */
+                justify-content: center;
+                /* Centra el contenido horizontalmente */
+                gap: 10px;
+                /* Espacio entre el logo y el texto */
+            }
+            
+            .logo img {
+                width: 50px;
+                /* Ajusta el tamaño del logo */
+                height: auto;
+                /* Mantiene la proporción del logo */
+            }
+            
+            .logo span {
+                font-size: 1.5em;
+                /* Tamaño de la fuente del texto */
+                font-weight: bold;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <!-- Nav -->
+            <div class="nav container">
+                <!-- Logo -->
+                <a href="../index.php" class="logo">
+                    <img src="../img/logo.png" alt="Logo">
+                    <span>Living Together</span>
+                    <!-- Agrega el nombre al lado del logo -->
+                </a>
+
+                <!-- NavBar -->
+                <div class="nav-icons">
+                    <a href="./vistas/inicioRegistro.php"><i class='bx bx-user'></i></a>
+                    <!-- Menu Icon-->
+                    <div class="menu-icon">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Registrarse</button>
+                    </div>
+                </div>
+                <div class="contenedor__login-register">
+                    <!-- Formulario de Inicio de Sesión -->
+                    <form action="../Controladores/UserController.php" method="POST" class="formulario__login">
+                        <h2>Inicio de Sesión</h2>
+                        <input type="email" name="correo" id="login_correo" placeholder="Correo electrónico" required><br>
+                        <div class="password-container">
+                            <input type="password" name="password" class="pass" id="login_password" placeholder="Contraseña" required>
+                            <i class='bx bx-show-alt'></i>
+                        </div>
+                        <button type="submit" name="login" class="button">Iniciar sesión</button>
+                    </form>
+
+                    <!-- Formulario de Registro -->
+                    <form action="../Controladores/UserController.php" method="POST" class="formulario__register">
+                        <h2>Registrarse</h2>
+
+                        <!-- Campo de Nombre de Usuario -->
+                        <input type="text" name="username" placeholder="Nombre de Usuario" required><br>
+
+                        <!-- Campo de Teléfono -->
+                        <input type="number" name="telefono" id="telefono" placeholder="Teléfono" required><br>
+
+                        <!-- Campo de Correo -->
+                        <input type="email" name="correo" id="correo" placeholder="Correo electrónico" required><br>
+
+                        <!-- Campo de Contraseña -->
+                        <div class="password-container">
+                            <input type="password" name="password2" class="pass" id="password" placeholder="Crear Contraseña" required><br>
+                            <i class='bx bx-show-alt'></i>
+                        </div>
+
+                        <!-- Recomendaciones de Contraseña -->
+                        <div id="password-message" class="password-message"></div>
+                        <div id="password-strength" class="password-strength"></div>
+                        <div class="password-recommendations">
+                            <strong>Consejos para una contraseña segura:</strong><br> - Mínimo 8 caracteres<br> - Incluye letras mayúsculas y minúsculas<br> - Agrega números y caracteres especiales<br>
+                        </div>
+
+                        <!-- Campo de Roles -->
+                        <select name="rol" id="rol" class="select" required>
+                        <option value="">Selecciona un rol</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Roomie</option>
+                        <option value="3">Arrendatario</option>
+                    </select><br>
+
+                        <!-- Botón de Registro -->
+                        <button type="submit" name="register" class="button">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/contraseña.js"></script>
+
+    </body>
+
+    </html>
