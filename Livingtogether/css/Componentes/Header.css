@@ -1,0 +1,105 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga", sans-serif;
+}
+
+:root {
+    --main-color: #54372a;
+    --second-color: #df582e;
+    --text-color: #060413;
+    --container-color: #f8e4be;
+    --bg-color: #f9f6f2;
+    --text-alter-color: #94908e;
+    --font-family: "Montserrat Alternates", sans-serif;
+    --font-family-2: "Playfair Display", serif;;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--gray);
+}
+
+.contr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-color);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle {
+    cursor: pointer;
+    color: var(--container-color);
+    font-size: 2rem;
+}
+
+.toggle ion-icon {
+    font-size: 2rem;
+}
+
+h1 {
+    color: var(--container-color);
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+h1 strong {
+    color: var(--gray);
+}
+
+.contr h1 {
+    transition: color 0.5s ease;
+}
+
+/* Adaptación al sidebar */
+.navigation.active ~ .contr {
+    left: 80px;
+    transition: 0.5s;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid var(--white);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--container-color);
+}
+
+.user-email {
+    font-size: 0.9rem;
+    color: var(--container-color);
+    margin-top: 5px;
+}
+.profile-pic:hover {
+    border-color: var(--blue);
+    transition: border-color 0.5s ease;
+}
+
+.user-details .user-name:hover {
+    color: var(--main-color);
+    transition: color 0.5s ease;
+}

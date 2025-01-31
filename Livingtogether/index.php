@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/Roomies/estilos.css">
+    <link rel="stylesheet" href="css/Roomies/mapa.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="../index.php" class="logo">
+                <img src="./img/logo.png" alt="Logo">
+                <span>Living Together</span>  <!-- Agrega el nombre al lado del logo -->
+            </a>
+
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="#" class="nav-link">Home</a>
+                <!-- <a href="#services" class="nav-link">Services</a> -->
+                <a href="#viviendas" class="nav-link">Viviendas</a>
+                <a href="#Roomies" class="nav-link">Roomies</a>
+                <a href="#review" class="nav-link">Comentarios</a>
+            </div>
+            <!-- Nav Icons -->
+            <div class="nav-icons">
+                <a href="./vistas/inicioRegistro.php"><i class='bx bx-user'></i></a>
+                <!-- Menu Icon-->
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+<br><br>
+    <!-- Home -->
+    <section class="home container" id="home">
+        <div class="home-text">
+            <h1>Encuentra tu <br />
+                espacio ideal
+            </h1>
+            <p>
+                Habitaciones y viviendas para compartir o alquilar.
+            </p>
+            <a href="#viviendas" class="btn">
+                <span>Ver mas</span>
+                <i class='bx bx-chevron-up'></i>
+            </a>
+        </div>
+        <!-- Home imagen -->
+        <img src="./img/modelo-3d.png" alt="" class="home-img">
+    </section>
+
+
+    <!-- Services  -->
+    <!-- <section class="services container" id="services">-->
+    <!--  heading -->
+    <!--<div class="heading">
+            <h2>Blending cultur, coffee y top <br />
+                notch services
+            </h2>
+        </div>
+
+        <div class="services-content">
+            <div class="ser-box">
+                <img src="" alt="">
+                <p>Equiment</p>
+            </div>
+            <div class="ser-box">
+                <img src="" alt="">
+                <p>Type of coffee</p>
+            </div>
+            <div class="ser-box">
+                <img src="" alt="">
+                <p>Take a Way</p>
+            </div>
+            <div class="ser-box">
+                <img src="" alt="">
+                <p>Beans Varient</p>
+            </div>
+            <div class="ser-box">
+                <img src="" alt="">
+                <p>Pastry</p>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- products -->
+    <section class="products container" id="viviendas">
+        <!-- Heading -->
+        <div class="heading">
+            <h2>Viviendas</h2>
+            <p>Descubre una amplia gama de opciones de arriendo que se ajustan a tus necesidades y presupuesto. ¡Tu nuevo hogar está a solo un clic de distancia!
+            </p>
+        </div>
+        <!-- Products Content -->
+        <div class="product-content">
+            <!--Box 1  -->
+            <div class="product-box">
+                <i class="bx bx-heart heart-icon"></i>
+                <img src="./img/inmueble1.jpg" alt="">
+                <p>4 types Avaialble</p>
+                <h2>Apartamento</h2>
+                <p>Vivienda en un edificio con varias unidades, más compacta y con servicios compartidos, perfecta para quienes prefieren ubicación céntrica y bajo mantenimiento.</p>
+                <div class="product-info">
+                    <span>$700.000</span>
+                    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+
+            <!--Box 2  -->
+            <div class="product-box">
+                <i class="bx bx-heart heart-icon"></i>
+                <img src="./img/inmueble2.jpg" alt="">
+                <p>4 types Avaialble</p>
+                <h2>Casa</h2>
+                <p> Vivienda independiente, generalmente con jardín y más espacio, ideal para familias que buscan privacidad y confort</p>
+                <div class="product-info">
+                    <span>$1.200.000</span>
+                    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+
+            <!--Box 3  -->
+            <div class="product-box">
+                <i class="bx bx-heart heart-icon"></i>
+                <img src="./img/inmueble3.jpg" alt="">
+                <p>4 types Avaialble</p>
+                <h2>Apartaestudio</h2>
+                <p> Vivienda pequeña, generalmente de un solo ambiente, diseñada para una o dos personas, ideal para quienes buscan practicidad y ubicación céntrica.</p>
+                <div class="product-info">
+                    <span>$1.000.000</span>
+                    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+
+            <!--Box 4  -->
+            <!-- <div class="product-box">
+                <i class="bx bx-heart heart-icon"></i>
+                <img src="./img/inmueble4.jpg" alt="">
+                <p>4 types Avaialble</p>
+                <h2>Cappucino</h2>
+                <div class="product-info">
+                    <span>$14</span>
+                    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div> -->
+
+            <!--Box 5  -->
+            <!-- <div class="product-box">
+                <i class="bx bx-heart heart-icon"></i>
+                <img src="./img/inmueble5.jpg" alt="">
+                <p>4 types Avaialble</p>
+                <h2>Express</h2>
+                <div class="product-info">
+                    <span>$14</span>
+                    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div> -->
+
+            <!-- Box 6 -->
+            <!-- <div class="product-box">
+                <i class="bx bx-heart heart-icon"></i>
+                <img src="./img/inmueble6.jpg" alt="">
+                <p>4 types Avaialble</p>
+                <h2>Estudio</h2>
+                <div class="product-info">
+                    <span>$14</span>
+                    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div> -->
+            <a href="#viviendas" class="btn">
+                <span>Ver mas</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="team container" id="Roomies">
+        <div class="heading">
+            <h2>Roomies</h2>
+        </div>
+        <!-- Team Content -->
+        <div class="team-content">
+            <div class="team-box">
+                <img src="./img/perfil.jpg" alt="">
+                <h2>Sara Zones</h2>
+                <span>Creativo y Relajado</span>
+                <p>Soy una persona creativa que trabaja en [tu área creativa]. Disfruto de la tranquilidad en casa, pero también estoy abierto a socializar y compartir intereses.
+                </p>
+            </div>
+            <div class="team-box">
+                <img src="./img/perfil2.jpg" alt="">
+                <h2>Miguel Zones</h2>
+                <span>Amante de la Cocina y las Reuniones</span>
+                <p>Me apasiona cocinar y organizar reuniones en casa. Si te gusta compartir una buena comida y disfrutar de una convivencia amena, creo que podríamos llevarnos muy bien.
+                </p>
+            </div>
+            <div class="team-box">
+                <img src="./img/perfil3.jpg" alt="">
+                <h2>Jhostin Zones</h2>
+                <span>Aventurero y Sociable</span>
+                <p>Soy una persona sociable y aventurera que disfruta de nuevas experiencias. Me encanta explorar la ciudad y siempre estoy dispuesto a compartir una cena o una salida con mis compañeros de cuarto.
+                </p>
+            </div>
+        </div>
+        <a href="./vistas/Roomie/perfiles.php" class="btn">
+            <span>Ver mas</span>
+        </a>
+    </section>
+
+    <!-- Review -->
+    <section class="review container" id="review">
+        <div class="heading">
+            <h2>Comentarios de los clientes</h2>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="review-box">
+                        <img src="./img/jonas.jpg." alt="">
+                        <h2>Jonas Blue</h2>
+                        <span>¡Encuentra a tu Roomie Ideal!<br />
+                        </span>
+                        <p>¡Excelente experiencia! Encontré a mi roomie perfecto a través de esta página. La comunicación fue fluida y ahora compartimos un apartamento increíble en el centro de la ciudad. ¡Altamente recomendado!</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="review-box">
+                        <img src="./img/eden.jpg" alt="">
+                        <h2>Eden Blue</h2>
+                        <span>Arriendo Sin Estrés<br />
+                        </span>
+                        <p>La búsqueda de arriendo fue mucho más fácil de lo que esperaba. La plataforma es intuitiva y las opciones se adaptaron exactamente a lo que necesitaba. Gracias a este sitio encontré un lugar ideal para vivir. ¡Muy satisfecho!
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="review-box">
+                        <img src="./img/daniel.jpg" alt="">
+                        <h2>Charlie</h2>
+                        <span>Facilidad y Transparencia en el Arriendo <br />
+                        </span>
+                        <p>La página me ayudó a encontrar un departamento en una zona muy conveniente. Además, la sección de comentarios sobre los arrendadores fue clave para tomar una decisión informada. ¡Gracias por facilitar tanto el proceso!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="heading">
+            <h2>Ubicación y Formulario de Contacto</h2>
+        </div>
+        <div class="contenedor" style="display:flex; justify-content: center; text-aling: center">
+            <!-- Columna del mapa -->
+            <div class="columna">
+            <div id="mapa">
+    <!-- Aquí va el iframe con la URL del mapa -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2811.9925579308406!2d-74.18359341743758!3d4.637205189338442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scarrera%2092%20a%2349a%20-18%20sur!5e0!3m2!1ses!2sco!4v1733345480531!5m2!1ses!2sco" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+            </div>
+
+            <!-- Columna del formulario de contacto -->
+            <!-- <div class="columna" id="contacto">
+                <h2>Formulario de Contacto</h2>
+                <form action="/enviar" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br><br>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+                    <button class="btn-box1" type="submit">Enviar</button>
+                </form>
+            </div> -->
+        </div>
+        
+        </div>
+    </section>
+    <section class="info-project container">
+    <div class="info-box">
+        <h3>Información de contacto</h3>
+        
+        <!-- Correo -->
+        <div class="social-item">
+            <a href="mailto:livingtogether@gmail.com" target="_blank">
+                <i class="bx bx-mail-send" style="font-size: 40px;"></i>
+                <p>Correo</p>
+            </a>
+        </div>
+        
+        <!-- Redes Sociales -->
+        <div class="social">
+            <!-- Facebook -->
+            <div class="social-item">
+                <a href="https://www.facebook.com/profile.php?id=61570272561025&mibextid=ZbWKwL" target="_blank">
+                    <i class="bx bxl-facebook" style="font-size: 40px;"></i>
+                    <p>Facebook</p>
+                </a>
+            </div>
+            
+            <!-- WhatsApp -->
+            <div class="social-item">
+                <a href="https://wa.me/1234567890" target="_blank">
+                    <i class="bx bxl-whatsapp" style="font-size: 40px;"></i>
+                    <p>WhatsApp</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Sección de información de contacto */
+.info-project {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;  /* Aumento del espacio entre los iconos */
+    margin-top: 1rem;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social a {
+    color: var(--main-color);
+    text-decoration: none;
+    display: block;
+}
+
+.social a:hover {
+    color: var(--second-color);
+}
+
+.social-item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.social-item p {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.social-item p:hover {
+    color: var(--second-color);
+}
+
+/* Estilos para el pie de página */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem !important;
+}
+
+.footer .logo {
+    color: var(--main-color);
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.social a {
+    font-size: 24px;
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+
+.social a:hover {
+    color: var(--second-color);
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.footer-box a {
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.copyright {
+    padding: 30px;
+    color: var(--main-color);
+    text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width:1080px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .home-text h1 {
+        font-size: 3rem;
+    }
+    .product-content {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px;
+    }
+}
+
+@media (max-width: 875px) {
+    section {
+        padding: 2rem 0;
+    }
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .home {
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top: 4.5rem !important;
+    }
+    .home-text {
+        order: 1;
+    }
+    .heading h2,
+    .book-data h2 {
+        font-size: 1.6rem
+    }
+    .product-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .book {
+        padding: 20px;
+    }
+    .book-data {
+        margin-top: 3rem;
+        max-width: 350px;
+        width: 100%;
+    }
+    .book-data form {
+        display: grid;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .input-box {
+        border-bottom: 1px solid var(--text-alter-color);
+    }
+    .footer {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        top: 15px;
+    }
+    .nav {
+        padding: 14px 20px;
+    }
+    .logo {
+        font-size: 1.25rem;
+    }
+    .menu-icon {
+        display: flex;
+    }
+    .navbar {
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        background: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .open-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .nav-link {
+        display: block;
+        margin: 1rem 0;
+    }
+}
+
+@media(max-width:500px) {
+    .heading h2 br {
+        display: contents;
+    }
+    .service-content {
+        justify-content: center;
+    }
+    .product-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-text h1 {
+        font-size: 2rem;
+    }
+    .services-content {
+        grid-template-columns: repeat(auto-fit, minmax(auto, 140px));
+    }
+    .ser-box img {
+        width: 80px;
+        height: 80px;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .heading h2,
+    .book-data h2 {
+        font-size: 1.4rem;
+    }
+}
+</style>
+
+
+
+
+    <!-- Book -->
+    <!-- <section class="book container" id="book">
+        <img src="" alt="" class="book-img">
+        <div class="book-overlay"></div>
+        <div class="book-data">
+            <h2>Let's book a Table <br /> 
+            for you
+            </h2>
+            <form action="book">
+                <div class="input-box">
+                    <i class='bx bx-phone-call'></i>
+                    <input type="tel" name="" placeholder="Your number" id="">
+                </div>
+                <div class="input-box">
+                    <i class='bx bx-user'></i>
+                    <input type="number" name="" placeholder="People" id="">
+                </div>
+                <a href="#" class="book-btn">Book Table</a>
+            </form>
+            <p>We will contact you to confimr your booking</p>
+        </div>
+    </section> -->
+
+
+    <!-- Footer -->
+    <section class="footer container">
+        <div class="footer-box">
+            <a href="#" class="logo">Living Together</a>
+            <div class="social">
+                <a href="#"><i class='bx bxl-twitch'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <a href="#">Our Story</a>
+            <a href="#">FAQ</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="footer-box">
+            <h3>Customer's Recourses</h3>
+            <a href="#">Menu</a>
+            <a href="#">Location</a>
+            <a href="#">Support</a>
+        </div>
+        <div class="footer-box">
+            <h3>Services</h3>
+            <a href="#">Payment Options</a>
+            <a href="#">Refunds & Exchanges</a>
+            <a href="#">Limitation Of liability</a>
+        </div>
+    </section>
+
+    <script src="js/Roomie.js"></script>
+    <!-- Copyright -->
+    <p class="copyright">&#169; Living Together - Yulian Vargas</p>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Link JS -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

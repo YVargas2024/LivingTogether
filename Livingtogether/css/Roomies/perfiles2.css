@@ -1,0 +1,173 @@
+/* Fondo de la página */
+
+body {
+    background-color: #f9f6f2;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Contenedor principal del perfil */
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/* Grilla de perfiles */
+
+.perfil-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Espacio entre las cajas */
+    width: 100%;
+    /* Hace que la grilla se ajuste al 100% del contenedor */
+    max-width: 1000px;
+    /* Límite máximo para el contenedor */
+    margin-bottom: 40px;
+}
+
+
+/* Estilo de cada tarjeta de perfil */
+
+.perfil-card,
+.team-box {
+    border-radius: 10px;
+    background-color: #f0e7d8;
+    /* Fondo de la tarjeta más claro */
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    position: relative;
+    border: 2px solid;
+    border-color: hsl(calc(120 * (var(--rand) / 100)), 70%, 80%);
+    /* Colores pasteles */
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.perfil-card:hover,
+.team-box:hover {
+    transform: scale(1.05);
+    /* Aumentar tamaño al pasar el mouse */
+}
+
+
+/* Imagen del perfil */
+
+.perfil-card img,
+.team-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+
+/* Nombre del perfil */
+
+.perfil-card .perfil-nombre,
+.team-box .perfil-nombre {
+    font-size: 14px;
+    margin: 2px 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Rol y edad */
+
+.perfil-card .perfil-rol,
+.team-box .perfil-rol,
+.perfil-card .perfil-edad,
+.team-box .perfil-edad {
+    font-size: 12px;
+    text-align: center;
+    margin: 1px 0;
+}
+
+
+/* Botón de ver perfil */
+
+.perfil-ver,
+.ver-perfil {
+    display: block;
+    text-align: center;
+    background-color: #d3d3d3;
+    /* Fondo del botón gris claro */
+    color: black;
+    /* Letras negras */
+    padding: 5px 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px auto;
+    width: 80%;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.perfil-ver:hover,
+.ver-perfil:hover {
+    background-color: #b0b0b0;
+    /* Gris un poco más oscuro al hacer hover */
+}
+
+
+/* Estilos de paginación horizontal */
+
+.paginacion {
+    text-align: center;
+    margin-top: 40px;
+    /* Margen arriba para separar la paginación del contenido */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Espacio entre los botones de paginación */
+}
+
+.paginacion a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    /* Letra de color negro */
+    border: 1px solid #ccc;
+    /* Borde gris claro */
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.paginacion a.active {
+    font-weight: bold;
+    background-color: orange;
+    /* Color de fondo naranja cuando está activo */
+    color: white;
+    /* Letra blanca cuando está activo */
+}
+
+.paginacion a:hover {
+    background-color: orange;
+    /* Color de fondo naranja al pasar el mouse */
+    color: white;
+    /* Letra blanca al pasar el mouse */
+}
+
+
+/* Espaciado entre el header y los perfiles */
+
+.contenedor-equipo {
+    margin-top: 80px;
+    /* Ajusta este valor según el tamaño de tu header */
+}

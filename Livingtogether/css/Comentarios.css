@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+*{
+font-family: var(--font-family);
+}
+:root{
+    --main-color: #54372a;
+    --second-color: #df582e;
+    --text-color: #060413;
+    --container-color: #f8e4be;
+    --bg-color: #f9f6f2;
+    --text-alter-color: #94908e;
+    --font-family:"Viga", sans-serif;
+}
+body{
+    background: var(--bg-color);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-color);
+    font-family: var(--font-family);
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.left-column,
+.right-column {
+    width: 48%; /* Make both columns nearly equal width */
+}
+
+.left-column {
+    padding-right: 10px;
+}
+
+.right-column {
+    padding-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid var(--second-color);
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 5px rgba(84, 55, 42, 0.5);
+}
+
+.stars-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 2rem;
+    color: var(--text-alter-color);
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.star:hover,
+.star.selected {
+    color: var(--second-color);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: var(--second-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--main-color);
+}
+
+#valoracion {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--main-color); /* Título con color principal */
+    font-family: var(--font-family);
+}
+
+.comments-section {
+    background-color: var(--bg-color); /* Fondo claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    max-height: 400px; /* Altura máxima para el contenedor de comentarios */
+    overflow-y: auto; /* Habilita el scroll en el contenedor */
+}
+
+.comment {
+    background-color: var(--container-color); /* Fondo de cada comentario */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: var(--text-color); /* Color de texto principal */
+}
+
+.comment p strong {
+    color: var(--main-color); /* Resaltar el nombre del usuario */
+    font-weight: bold;
+}
+
+.comment p small {
+    font-size: 0.9rem;
+    color: var(--text-alter-color); /* Color más claro para la fecha */
+}
+
+.comment hr {
+    border: 1px solid var(--second-color); /* Línea divisoria con color secundario */
+}
+
+.comment:last-child {
+    margin-bottom: 0;
+}
+
+.comment .valoracion {
+    color: var(--second-color); /* Color para la valoración */
+}
+
+.comment .fecha {
+    font-style: italic;
+    color: var(--text-alter-color); /* Color claro para la fecha */
+}
+

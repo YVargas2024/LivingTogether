@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga";
+}
+/* Header */
+header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 1200px; /* Máximo ancho */
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal del Header */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NavBar */
+.navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    color: #bbb;
+    font-family: var(--font-family);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* Información del Usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Imagen de Perfil */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contenedor de los Detalles */
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.user-email {
+    font-size: 0.75rem;
+    color: #ddd;
+    white-space: nowrap;
+}
+
+/* Icono para el menú desplegable */
+.dropdown-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Contenido del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 15px;
+   border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    min-width: 200px;
+    right: 0;
+    top: 60px; /* Ajuste para separar el menú del icono */
+}
+
+/* Botones en el menú desplegable */
+.dropdown-content button, .dropdown-content a {
+    width: 100%;
+    padding: 8px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.dropdown-content button .icon, .dropdown-content a .icon {
+    margin-right: 5px;
+}
+
+/* Estilo específico para el botón de Cerrar Sesión */
+.dropdown-content button.logout-btn {
+    background-color: #ff4d4d;
+}
+/* Mostrar el menú cuando esté activo */
+.dropdown-icon.active + .dropdown-content {
+    display: block;
+}
+
+/* Espacio para el Section */
+section {
+    margin-top: 90px; /* Ajusta el espacio para que no se sobreponga con el header */
+    padding: 20px;
+    color: black;
+}

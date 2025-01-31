@@ -1,0 +1,71 @@
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #f9f6f2;
+    color: #060413;
+    margin: 0; /* Eliminar el margen predeterminado para que se adapte mejor */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que se centre verticalmente */
+    flex-direction: column;
+}
+
+.perfil-container {
+    max-width: 800px;
+    width: 100%; /* Asegura que la tarjeta no sobrepase el ancho de la página */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff; /* Aseguramos que el color de fondo sea blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.perfil-container img {
+    width: 250px; /* Tamaño fijo de la imagen */
+    height: 250px; /* Tamaño fijo de la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte de manera proporcional */
+    border-radius: 50%; /* Redondear la imagen para que sea un círculo */
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn-regresar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #df582e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-regresar:hover {
+    background-color: #54372a;
+}

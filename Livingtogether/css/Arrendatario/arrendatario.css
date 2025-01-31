@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+:root {
+    --main-color: #54372a;
+    --second-color: #df582e;
+    --text-color: #060413;
+    --container-color: #f8e4be;
+    --bg-color: #f9f6f2;
+    --text-alter-color: #94908e;
+    --font-family: "Viga", sans-serif;
+    --font-family-2: "Playfair Display", serif;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* Cambiar la disposición a columna */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Coloca los botones uno debajo del otro */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+nav ul li {
+    display: flex;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    width: 100%;
+    padding-left: 190px;  /* Mueve los botones a la derecha */
+}
+
+/* Estilo común para los botones */
+#registro-btn, #volver-btn {
+    display: inline-block;
+    color: var(--bg-color);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 20px; /* Ajuste del tamaño de los botones */
+    background-color: var(--text-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    width: auto;  /* Evita que los botones ocupen todo el ancho */
+}
+
+/* Efecto hover para ambos botones */
+#registro-btn:hover, #volver-btn:hover {
+    color: var(--second-color);
+    background-color: var(--main-color);
+}
+
+/* Especificar un fondo y color de texto distinto para cada botón si es necesario */
+#registro-btn {
+    background-color: var(--text-color);/* Fondo naranja para 'Registrar' */
+}
+
+#registro-btn:hover {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+#volver-btn {
+    background-color: var(--text-color); /* Fondo oscuro para 'Volver' */
+}
+
+#volver-btn:hover {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+/* Contenedor del botón de ayuda */
+#help-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    right: 20px;  /* Ajusta la distancia desde la parte derecha */
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo del logo de WhatsApp */
+.whatsapp-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del mensaje de saludo */
+#greeting-message {
+    display: none;
+    position: absolute;
+    bottom: 70px; /* Posiciona el mensaje encima del logo */
+    background-color: #25D366;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Mostrar el mensaje al pasar el cursor */
+#help-button:hover #greeting-message {
+    display: block;
+}
+
+/* Estilo para el enlace de WhatsApp */
+.whatsapp-link {
+    text-decoration: none;
+}

@@ -1,0 +1,214 @@
+/* El cuerpo tiene altura completa, pero no usamos flex en él */
+body {
+    margin: 0;
+    height: 100vh;  /* Asegura que el body tenga la altura completa de la ventana */
+}
+
+h1{
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+}
+/* Contenedor que queremos centrar */
+.perfilContainer {
+    width: 1300px;                /* Ancho fijo del contenedor */
+    display: flex;                /* Usamos flexbox dentro de este contenedor */
+    justify-content: center;      /* Centra los elementos dentro de perfilContainer horizontalmente */
+    align-items: center;          /* Centra los elementos dentro de perfilContainer verticalmente */                    /* Espacio entre los elementos dentro del contenedor */
+    position: absolute;           /* Establecemos posicionamiento absoluto */
+    top: 50%;                     /* Lo mueve al 50% de la altura de la ventana */
+    left: 50%;                    /* Lo mueve al 50% del ancho de la ventana */
+    transform: translate(-50%, -50%); /* Lo ajusta para que se quede en el centro exacto */
+}
+
+.perfilCard{
+height: 500px;
+width: 50%;
+display: block;
+
+}
+.fotoRedonda{
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    object-fit: cover;
+    border-color: black;
+    border-width: 5px;
+    margin-top: 60px;
+    border-style: dashed;
+}
+.EliminarFoto {
+    display: flex;            /* Usamos flexbox para el contenedor */
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;      /* Centra el contenido verticalmente */
+    font-size: 20px;
+    margin-top: 20px;         /* Espacio superior */
+    width: 100%;              /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.EliminarFoto a {
+    display: flex;            /* Usamos flexbox para el botón */
+    justify-content: center;  /* Centra el texto horizontalmente dentro del botón */
+    align-items: center;      /* Centra el texto verticalmente dentro del botón */
+    gap: 7px;                 /* Espacio entre el texto y el ícono (si lo tuviera) */
+    text-decoration: none;    /* Elimina el subrayado del enlace */
+    color: black;             /* Color del texto */
+    width: 200px;             /* Ancho del botón */
+    height: 50px;             /* Alto del botón */
+    border: 2px solid black;  /* Borde del botón */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    border-radius: 5px;       /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Efecto de transición */
+}
+
+/* Efecto hover para el botón */
+.EliminarFoto a:hover {
+    background-color: #333;  /* Fondo gris oscuro */
+    color: white;             /* Cambia el color del texto a blanco */
+}
+
+.profile-info {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado horizontal con margen superior */
+    transition: transform 0.3s ease; /* Animación suave al pasar el ratón */
+}
+
+.profile-info h3 {
+    font-size: 1.6em; /* Tamaño de la fuente del nombre */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Separación inferior */
+}
+
+.profile-info p {
+    font-size: 1.1em; /* Tamaño de la fuente de los párrafos */
+    color: #555; /* Color de texto suave */
+    margin: 5px 0; /* Espaciado entre los párrafos */
+}
+
+.perfilActions {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.perfilActions a {
+    color: #007bff; /* Color de los enlaces */
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 15px; /* Espacio entre los enlaces */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Animación suave */
+}
+
+.perfilActions a:hover {
+    color: #0056b3; /* Color al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.profile-info:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al pasar el ratón */
+}
+
+/* General Styles */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+}
+
+.profile-info, .profile-form {
+    width: 100%;
+    max-width: 700px;
+    margin-top:60px ;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.profile-form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crear dos columnas */
+    gap: 20px; /* Espacio entre las columnas */
+    grid-template-rows: auto; /* Las filas se ajustan automáticamente */
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; /* Los elementos dentro de la fila se apilan verticalmente */
+}
+
+.form-row label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+}
+
+.form-row input, 
+.form-row select, 
+.profile-form input[type="file"] {
+    width: 100%; /* Asegura que los inputs y select ocupen el 100% del ancho */
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="number"]:focus,
+.form-row select:focus {
+    border-color: #007bff;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.submit-btn, .cancel-btn {
+    padding: 8px; /* Reducir el padding para que los botones sean más pequeños */
+    font-size: 0.9em; /* Reducir el tamaño de la fuente */
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* Action Links */
+.perfilActions a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.perfilActions a:hover {
+    text-decoration: underline;
+}

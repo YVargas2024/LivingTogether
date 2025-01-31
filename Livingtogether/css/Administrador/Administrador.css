@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Viga";
+}
+:root{
+    --main-color: #54372a;
+    --second-color: #df582e;
+    --text-color: #060413;
+    --container-color: #f8e4be;
+    --bg-color: #f9f6f2;
+    --text-alter-color: #94908e;
+    --font-family: "Montserrat Alternates", sans-serif;
+    --font-family-2: "Playfair Display", serif;;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.cardBox{
+    position:  relative;
+    width: 100%;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:30px;
+}
+.cardBox .card{
+    position: relative;
+    background: var(--text-color);
+    margin-top: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.cardBox .card .numbers{
+position: relative;
+font-weight: 500;
+font-size: 2.5rem;
+color: var(--bg-color);
+}
+.cardBox .card .cardName{
+    color: var(--bg-color);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+.cardBox .card .iconBx{
+    font-size: 3.5rem;
+    color: var(--container-color);
+}
+.cardBox .card:hover{
+    background: var(--text-color);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx{
+color: var(--second-color);
+}
+/* Charts */
+.charts {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Dos columnas */
+    grid-gap: 20px; /* Espacio entre gráficos */
+    width: 100%;
+    padding: 20px; /* Padding total */
+    padding-top: 0; /* Sin padding superior */
+}
+
+.chart {
+    background: #fff;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    width: 100%; /* Ancho completo */
+}
+
+.chart h2 {
+    margin-bottom: 5px;
+    font-size: 20px; /* Tamaño del título */
+    color: #000;
+    text-align: center;
+}
+
+/* Estilo para hacer que el gráfico de dona ocupe ambas columnas */
+.chart.doughnut {
+    grid-column: span 2; /* Ocupa ambas columnas */
+}
+
+/* Media Queries para Responsividad */
+
+/* Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .charts {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .charts {
+        padding: 10px; /* Reducir padding */
+        grid-gap: 15px; /* Reducir espacio entre gráficos */
+    }
+
+    .chart {
+        padding: 15px; /* Reducir padding interno */
+    }
+
+    .chart h2 {
+        font-size: 18px; /* Tamaño del título en móviles */
+    }
+}
+
+/* Ajustes para pantallas extremadamente pequeñas */
+@media (max-width: 400px) {
+    .charts {
+        padding: 5px; /* Reducir aún más el padding */
+        grid-gap: 10px; /* Reducir espacio entre gráficos */
+    }
+
+    .chart {
+        padding: 10px; /* Reducir aún más el padding interno */
+    }
+
+    .chart h2 {
+        font-size: 16px; /* Tamaño del título en pantallas pequeñas */
+    }
+}
+/* Responsividad */
+@media(max-width:880px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .charts{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:500px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}

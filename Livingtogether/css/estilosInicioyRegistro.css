@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    font-family: 'viga';
+}
+main{
+    display: flex;
+    justify-content: center;  /* Centrar horizontalmente */
+    align-items: center;      /* Centrar verticalmente */
+    height: 100vh;            /* Altura completa del viewport */
+    margin: 0;
+    background: #F0EDE5;
+}
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    
+}
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #fff;
+}
+
+.caja__trasera div {
+    margin: 100px 40px;
+    color: #060413;
+    transition: all 500ms;
+}
+
+.caja__trasera div p,
+.caja__trasera button {
+    margin-top: 30px;
+}
+
+.caja__trasera div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.caja__trasera div p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.caja__trasera button {
+    padding: 10px 40px;
+    border: 2px solid #94908e;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: #060413;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+    background: #E8D8CD;
+    color: #54372A;
+}
+
+
+/*Formularios*/
+
+.contenedor__login-register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form {
+    width: 100%;
+    padding: 30px 20px;
+    background: #E8D8CD;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor__login-register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #54372A;
+}
+
+.contenedor__login-register form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+.contenedor__login-register form select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 4 5%22%3E%3Cpath fill=%22%2354372A%22 d=%22M2 0L0 2h4L2 0z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px 10px;
+}
+
+/* Efecto hover */
+.contenedor__login-register form select:hover {
+    border-color: #8B5B45; /* Cambia el color del borde al pasar el ratón */
+    background-color: #f9f9f9; /* Cambia ligeramente el color de fondo */
+}
+
+/* Efecto focus */
+.contenedor__login-register form select:focus {
+    border-color: #54372A; /* Cambia el color del borde al hacer foco */
+    background-color: #fff; /* Asegura que el fondo permanezca blanco */
+    box-shadow: 0 0 5px rgba(84, 55, 42, 0.5); /* Agrega un ligero resplandor alrededor */
+}
+
+/* Ajuste para navegadores que usan la pseudo-clase :active */
+.contenedor__login-register form select:active {
+    background-color: #eee; /* Cambia el fondo cuando se selecciona */
+}
+
+
+.contenedor__login-register form button {
+    padding: 12px 40px;
+    margin-top: 9px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #54372A;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover */
+.contenedor__login-register form button:hover {
+    background-color: #8B5B45; /* Color más claro al pasar el ratón */
+    transform: translateY(-2px); /* Un pequeño efecto de elevación */
+}
+
+/* Efecto activo cuando el botón es presionado */
+.contenedor__login-register form button:active {
+    background-color: #3E251D; /* Color más oscuro cuando se presiona */
+    transform: translateY(0); /* Restablecer la elevación */
+}
+
+.formulario__login {
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+    /*Formularios*/
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+    .contenedor__login-register form {
+        position: relative;
+    }
+}

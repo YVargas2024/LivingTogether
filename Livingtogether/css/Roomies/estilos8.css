@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #54372a;
+    --second-color: #df582e;
+    --text-color: #060413;
+    --bg-color: #f9f6f2;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* Aplicar Montserrat Alternates a todo el cuerpo */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    /* Aplicar Playfair Display a los encabezados */
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.contenedor-equipo {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenido-equipo {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.team-box {
+    font-family: 'Montserrat Alternates', sans-serif;
+    flex: 0 0 calc(85% / 6);
+    /* Ajusta el número de perfiles a mostrar por página */
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    /* Borde del cuadro */
+    border-radius: 10px;
+    /* Esquinas redondeadas */
+    background-color: white;
+    /* Fondo blanco */
+}
+
+.team-box img {
+    width: 337px;
+    /* Ancho fijo */
+    height: 400px;
+    /* Alto fijo */
+    object-fit: cover;
+    /* Asegura que la imagen se recorte adecuadamente */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-box .edad {
+    font-weight: bold;
+    /* Poner en negrita la edad */
+}
+
+.anterior,
+.siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}
+
+.contenedor-equipo {
+    text-align: center;
+    /* Centrar el contenido */
+}
+
+.ver-mas {
+    background-color: rgb(223, 88, 46);
+    /* Color de fondo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* Mantener la fuente */
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    /* Asegurar que el botón se comporte como un bloque en línea */
+}
+
+.ver-mas:hover {
+    background-color: rgb(84, 55, 42);
+    /* Color de fondo al pasar el mouse */
+}
